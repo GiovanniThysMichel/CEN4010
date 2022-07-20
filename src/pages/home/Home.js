@@ -24,5 +24,7 @@ export default function Home() {
         <TransactionForm uid={user.uid} />
       </div>
     </div>
+    
   )
+  
 }
