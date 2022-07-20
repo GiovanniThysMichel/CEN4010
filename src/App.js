@@ -8,6 +8,7 @@ import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
+import Update from './pages/settingsoptions/Update'
 // styles
 import './App.css'
 function App() {
@@ -18,7 +19,7 @@ function App() {
       {authIsReady && (
         <BrowserRouter>
         {user && <Sidebar />}
-        <div className="container"></div>
+        <div className="container">
           <Navbar />
           <Switch>
             <Route exact path="/">
@@ -37,7 +38,12 @@ function App() {
               {!user && <Redirect to="/login" />}
               {user && <Settings/>}
             </Route>
+            <Route exact path="/settings/updateinfo">
+              {!user && <Redirect to="/login" />}
+              {user && <Update/>}
+            </Route>
           </Switch>
+          </div>
         </BrowserRouter>
       )}
     </div>
