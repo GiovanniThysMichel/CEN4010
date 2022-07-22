@@ -9,6 +9,7 @@ import Signup from './pages/signup/Signup'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Update from './pages/settingsoptions/Update'
+import AddInfo from './pages/addinfo/AddInfo'
 // styles
 import './App.css'
 function App() {
@@ -22,30 +23,41 @@ function App() {
         <div className="container">
           <Navbar />
           <Switch>
+
             <Route exact path="/">
               {!user && <Redirect to="/login" />}
               {user && <Home />}
             </Route>
+
             <Route path="/login">
               {user && <Redirect to="/" />}
               {!user && <Login />}
             </Route>
+
             <Route path="/signup">
               {user && user.displayName && <Redirect to="/" />}
               {!user && <Signup />}
             </Route>
+
+            <Route exact path="/addinfo/AddInfo">
+              {!user && <Redirect to="/login" />}
+              {user && <AddInfo/>}
+            </Route>
+
             <Route exact path="/settings">
               {!user && <Redirect to="/login" />}
               {user && <Settings/>}
             </Route>
+
             <Route exact path="/settings/updateinfo">
               {!user && <Redirect to="/login" />}
               {user && <Update/>}
             </Route>
+
           </Switch>
           </div>
         </BrowserRouter>
-      )}
+      )} 
     </div>
   );
 }
