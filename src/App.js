@@ -8,7 +8,9 @@ import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import Update from './pages/settingsoptions/Update'
+import FetchData from './pages/settingsoptions/FetchData'
+import Store from './pages/store/Store'
+import OnlineUsers from './components/OnlineUsers'
 // styles
 import './App.css'
 function App() {
@@ -34,19 +36,25 @@ function App() {
               {user && user.displayName && <Redirect to="/" />}
               {!user && <Signup />}
             </Route>
+            <Route exact path="/store">
+              {!user && <Redirect to="/login" />}
+              {user && <Store/>}
+            </Route>
             <Route exact path="/settings">
               {!user && <Redirect to="/login" />}
               {user && <Settings/>}
             </Route>
             <Route exact path="/settings/updateinfo">
               {!user && <Redirect to="/login" />}
-              {user && <Update/>}
+              {user && <FetchData/>}
             </Route>
           </Switch>
           </div>
+          {user && <OnlineUsers/>}
         </BrowserRouter>
       )}
     </div>
+    
   );
 }
 
