@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom"
-import { useAuthContext } from '../../hooks/useAuthContext'
-import { useCollection } from '../../hooks/useCollection'
-
 import styles from './Settings.module.css'
 
 export default function Settings() { 

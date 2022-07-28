@@ -8,13 +8,16 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
+  const [firstName, setFirstname] = useState('')
+  const [LastName, setLastname] = useState('')
+  const [dob, setDob] = useState('')
   const [thumbnail, setThumbnail] = useState(null)
   const [thumbnailError, setThumbnailError] = useState(null)
   const { signup, isPending, error } = useSignup()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    signup(email, password, displayName, thumbnail)
+    signup(email, password, firstName, LastName, dob, displayName, thumbnail)
   }
 
     const handleFileChange = (e) => {
@@ -58,6 +61,33 @@ export default function Signup() {
           type="password" 
           onChange={(e) => setPassword(e.target.value)} 
           value={password}
+        />
+      </label>
+      <label>
+        <span>First Name:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setFirstname(e.target.value)} 
+          value={firstName}
+        />
+      </label>
+      <label>
+        <span>Last Name:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setLastname(e.target.value)} 
+          value={LastName}
+        />
+      </label>
+      <label>
+        <span>Date Of Birth:</span>
+        <input
+          required
+          type="date" 
+          onChange={(e) => setDob(e.target.value)} 
+          value={dob}
         />
       </label>
       <label>
