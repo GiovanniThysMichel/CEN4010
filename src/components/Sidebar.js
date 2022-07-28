@@ -24,12 +24,18 @@ export default function Sidebar() {
             <li>
               <NavLink exact to="/">
                 <img src={DashboardIcon} alt="dashboard icon" />
-                <span>Dashboard</span>
+                <span>My Dashboard</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/store">
+                <img src={AddIcon} alt="add store icon" />
+                <span>Store</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/settings">
-                <img src={AddIcon} alt="add project icon" />
+                <img src={AddIcon} alt="add settings icon" />
                 <span>Settings</span>
               </NavLink>
             </li>

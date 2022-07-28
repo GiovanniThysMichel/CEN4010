@@ -15,8 +15,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <ul>
         <li className={styles.title}>My Inventory</li>
-        <img src={Temple} alt="dojo logo" />
-        <span>The Inventory Management Dojo</span>
+        <span>The Inventory Management Hello, </span>
         {!user && (
           <>
             <li><Link to="/login">Login</Link></li>
@@ -27,7 +26,7 @@ export default function Navbar() {
 
         {user && (
           <>
-            <li>hello, {user.displayName}</li>
+            <li>{user.displayName}</li>
             <li>
               {!isPending && <button className="btn" onClick={logout}>Logout</button>}
               {isPending && <button className="btn" disabled>Logging out...</button>}
