@@ -38,6 +38,8 @@ export default function Store(){
                         <br></br>
                         <p className={styles.amount}>${doc.amount}</p>
                         <br></br>
+                        <p className={styles.name}>{doc.description}</p>
+                        <br></br>
                         </li>
                     </ul>
                     
