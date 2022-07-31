@@ -17,7 +17,7 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    signup(email, password, firstName, LastName, dob, displayName, thumbnail)
+    signup(email, password, firstName, LastName, dob, displayName, addy,city, state, zip, thumbnail)
   }
 
     const handleFileChange = (e) => {
@@ -97,6 +97,42 @@ export default function Signup() {
           type="text" 
           onChange={(e) => setDisplayName(e.target.value)} 
           value={displayName}
+        />
+      </label>
+  <label>
+        <span>Residential Address:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setAddy(e.target.value)} 
+          value={addy}
+        />
+      </label>
+      <label>
+        <span>city:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setCity(e.target.value)} 
+          value={city}
+        />
+      </label>
+      <label>
+        <span>State:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setState(e.target.value)} 
+          value={state}
+        />
+      </label>
+      <label>
+        <span>Zip code:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setZip(e.target.value)} 
+          value={zip}
         />
       </label>
       <label>
