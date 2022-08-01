@@ -11,13 +11,17 @@ export default function Signup() {
   const [firstName, setFirstname] = useState('')
   const [LastName, setLastname] = useState('')
   const [dob, setDob] = useState('')
+  const [addy, setAddy] = useState('')
+  const [city, setCity] = useState('')
+  const [state, setState] = useState('')
+  const [zip, setZip] = useState('')
   const [thumbnail, setThumbnail] = useState(null)
   const [thumbnailError, setThumbnailError] = useState(null)
   const { signup, isPending, error } = useSignup()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    signup(email, password, firstName, LastName, dob, displayName, addy,city, state, zip, thumbnail)
+    signup(email, password, firstName, LastName, dob, displayName, addy, city, state, zip, thumbnail)
   }
 
     const handleFileChange = (e) => {
