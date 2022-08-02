@@ -65,5 +65,3 @@ export const useSignup = () => {
 
   return { signup, error, isPending }
 }
-
-//https://www.geeksforgeeks.org/how-to-send-email-verification-link-with-firebase-using-reactjs/
