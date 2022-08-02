@@ -11,7 +11,11 @@ export default function Signup() {
   const [firstName, setFirstname] = useState('')
   const [LastName, setLastname] = useState('')
   const [dob, setDob] = useState('')
+  const [addy, setAddy]= useState ('')
   const [thumbnail, setThumbnail] = useState(null)
+  const [city, setCity] = useState ('')
+  const [state, setState] = useState('')
+  const [zip, setZip] = useState('')
   const [thumbnailError, setThumbnailError] = useState(null)
   const { signup, isPending, error } = useSignup()
 

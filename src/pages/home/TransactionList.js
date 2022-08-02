@@ -13,6 +13,7 @@ export default function TransactionList({ transactions }) {
           <p className={styles.name}>{transaction.name} </p>
           <p className={styles.amount}>${transaction.amount}</p>
           <p className={styles.name}>{transaction.description}</p>
+          <img src={transaction.imageUrl}  alt="image was not found" height="100px" width="100px"></img>
           <button onClick={() => deleteDocument(transaction.id)}>x</button>
         </li>
       ))}
