@@ -11,17 +11,14 @@ export default function Signup() {
   const [firstName, setFirstname] = useState('')
   const [LastName, setLastname] = useState('')
   const [dob, setDob] = useState('')
-  const [addy, setAddy]= useState ('')
   const [thumbnail, setThumbnail] = useState(null)
-  const [city, setCity] = useState ('')
-  const [state, setState] = useState('')
-  const [zip, setZip] = useState('')
+
   const [thumbnailError, setThumbnailError] = useState(null)
   const { signup, isPending, error } = useSignup()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    signup(email, password, firstName, LastName, dob, displayName, addy, city, state, zip, thumbnail)
+    signup(email, password, firstName, LastName, dob, displayName, thumbnail)
   }
 
     const handleFileChange = (e) => {
@@ -103,42 +100,7 @@ export default function Signup() {
           value={displayName}
         />
       </label>
-  <label>
-        <span>Residential Address:</span>
-        <input
-          required
-          type="text" 
-          onChange={(e) => setAddy(e.target.value)} 
-          value={addy}
-        />
-      </label>
-      <label>
-        <span>city:</span>
-        <input
-          required
-          type="text" 
-          onChange={(e) => setCity(e.target.value)} 
-          value={city}
-        />
-      </label>
-      <label>
-        <span>State:</span>
-        <input
-          required
-          type="text" 
-          onChange={(e) => setState(e.target.value)} 
-          value={state}
-        />
-      </label>
-      <label>
-        <span>Zip code:</span>
-        <input
-          required
-          type="text" 
-          onChange={(e) => setZip(e.target.value)} 
-          value={zip}
-        />
-      </label>
+
       <label>
         <span>Profile thumbnail:</span>
         <input 
