@@ -9,7 +9,8 @@ export default function Settings() {
       <br></br>
             <li><Link to="/settings/updateinfo">Update Personal Information</Link></li>
             <br></br>
-  
+            <li><Link to="/settings/updateprop">Update Property Information</Link></li>
+            <br></br>            
         </div>
         </div>
     )

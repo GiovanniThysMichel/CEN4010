@@ -12,6 +12,7 @@ import FetchData from './pages/settingsoptions/FetchData'
 import Store from './pages/store/Store'
 import OnlineUsers from './components/OnlineUsers'
 import ForgotPassword from './pages/forgotpassword/ForgotPassword'
+import UpdateProperty from './pages/settingsoptions/UpdateProperty'
 // styles
 import './App.css'
 function App() {
@@ -52,6 +53,10 @@ function App() {
             <Route exact path="/settings/updateinfo">
               {!user && <Redirect to="/login" />}
               {user && <FetchData/>}
+            </Route>
+            <Route exact path="/settings/updateprop">
+              {!user && <Redirect to="/login" />}
+              {user && <UpdateProperty/>}
             </Route>
           </Switch>
           </div>
