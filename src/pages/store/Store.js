@@ -21,6 +21,7 @@ export default function Store(){
         });
     }
         
+        
 
     return(
         <div className={styles.container}>
@@ -40,6 +41,7 @@ export default function Store(){
                         <br></br>
                         <p className={styles.name}>{doc.description}</p>
                         <br></br>
+                        <img src={doc.imageUrl}  alt="image was not found" height="100px" width="100px"></img>
                         </li>
                     </ul>
                     
