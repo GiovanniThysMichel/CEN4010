@@ -11,6 +11,7 @@ import Sidebar from './components/Sidebar'
 import FetchData from './pages/settingsoptions/FetchData'
 import Store from './pages/store/Store'
 import OnlineUsers from './components/OnlineUsers'
+import ForgotPassword from './pages/forgotpassword/ForgotPassword'
 // styles
 import './App.css'
 function App() {
@@ -35,6 +36,10 @@ function App() {
             <Route path="/signup">
               {user && user.displayName && <Redirect to="/" />}
               {!user && <Signup />}
+            </Route>
+            <Route exact path="/forgotpassword">
+              {user && <Redirect to="/login" />}
+              {!user && <ForgotPassword/>}
             </Route>
             <Route exact path="/store">
               {!user && <Redirect to="/login" />}
